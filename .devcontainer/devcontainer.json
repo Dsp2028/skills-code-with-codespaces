@@ -1,12 +1,14 @@
 {
   "name": "Basic Dev Environment",
   "image": "mcr.microsoft.com/devcontainers/base:debian",
+
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
       "installTools": true,
       "version": "3.10"
     }
   },
+
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,5 +16,7 @@
         "ms-python.debugpy"
       ]
     }
-  }
+  },
+
+  "postCreateCommand": ".devcontainer/postCreate.sh"
 }
